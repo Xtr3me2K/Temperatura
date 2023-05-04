@@ -6,11 +6,11 @@ public class ConversorTemperatura{
     
 
     //Declaração de variáveis
-    int n1, n2, total, op;
+    int n1, n2, op;
 
     //Criação e instância do objeto de entrada
     Scanner entrada = new Scanner(System.in);
-do{
+ do{
 
     System.out.println("n\t\t\t -- Conversor de Temperatura -- \n");
 
@@ -23,15 +23,33 @@ do{
 
     if(op == 1){
         System.out.println("\n\t\t\t -- Celsius --\n");
-    }else if(op == 2){
+         //Entrada
+         System.out.print("Informe N1: ");
+         n1 = entrada.nextInt();
+
+         //Processamento
+         n2 = n1 - 40;
+
+         //Saída
+         System.out.println(n1 + " - " + 40 + " = " + n2);
+        }else if(op == 2){
     System.out.println("\n\t\t\t -- Fahrnenheit -- \n");
+     //Entrada
+     System.out.print("Informe N1: ");
+     n1 = entrada.nextInt();
+
+     //Processamento
+     n2 = n1 + 32;
+
+     //Saída
+     System.out.println(n1 + " + " + 32 + " = " + n2);
     } else if(op == 3){
         System.out.println("Forte abraço!");
     }else{
         System.out.println("Opção" + op + "Incorreta!");
     }
 
-}while(op!=5);
+}while(op!=3);
 
  }
  
